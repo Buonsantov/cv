@@ -12,4 +12,12 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  visualizzaContatti() {
+    const q = window.innerWidth;
+    if (q <= 991) {
+      return true;
+    }
+    return false;
+  }
+
 }

@@ -1,10 +1,10 @@
 <div class="it-header-wrapper">
-  <div class="it-header-slim-wrapper  d-block align-items-center">
+  <!--   <div class="it-header-slim-wrapper  d-block align-items-center">
     <div class="container">
  
 
     </div>
-  </div>
+  </div> -->
   <div class="it-nav-wrapper">
     <div class="it-header-center-wrapper">
       <div class="container">
@@ -13,12 +13,52 @@
             <div class="it-header-center-content-wrapper">
               <div class="it-brand-wrapper" style="width: -webkit-fill-available;">
                 <a [routerLink]="['/']">
-                  <div class="it-brand-text d-none d-sm-none d-md-none d-lg-block" id="imgHead2"> <!-- text-align: -webkit-center; -->
+                  <div class="it-brand-text d-none d-sm-none d-md-none d-lg-block" id="imgHead2">
+                    <!-- text-align: -webkit-center; -->
                     <img class="profiloImg" src="./assets/images/foto_profilo.jpg" alt="cv-local">
                   </div>
                 </a>
               </div>
-              <div class="it-right-zone ">
+              <div class="it-right-zone d-none d-sm-none d-md-none d-lg-flex" style="width: 300rem;">
+
+
+                <div class="nomeText">BUONSANTO VITO</div>
+
+                <!-- COLLOUT CONTATTI-->
+
+                <div class="callout contatti">
+                  <div class="callout-title">
+                    <div class="callout-cv title">
+                      <svg class="icon" style="fill: white; color:white">
+                        <use xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#it-info-circle"></use>
+                      </svg>
+                      Contatti
+                    </div>
+                  </div>
+                  <div>
+                    <ul style="list-style-type: none;">
+
+                      <li class="contattiText">
+                        <img class="listImage" style="width:17px" src="./assets/images/call_svg.svg" alt="cv-local"> 3801969470
+                      </li>
+                      <li class="contattiText">
+                        <img class="listImage" src="./assets/images/mail_svg.svg" alt="cv-local">
+                        buonsantovito@gmail.com
+                      </li>
+                      <li class="contattiText"><a (click)="goToLink('linkedin')" class="cliccable">
+                          <img class="listImage" src="./assets/images/linkedin_svg.svg" alt="cv-local"
+                            > buonsantovito
+                        </a>
+                      </li>
+                      <li class="contattiText"><a (click)="download()" class="cliccable">
+                        <img class="listImage" src="./assets/images/download.svg" alt="cv-local"
+                          > Curriculum
+                      </a>
+                    </li>
+
+                    </ul>
+                  </div>
+                </div>
 
 
 
@@ -33,8 +73,7 @@
     </div>
 
 
-    <app-header-hamburger title='cv-local'  logo="./assets/images/foto_profilo-jpg" mobileWidth=991
-    linkArray="linkArray"
-      primaryColor="#3a3a3a" secondaryColor="#f0f8ff"></app-header-hamburger>
+    <app-header-hamburger title='BUONSANTO VITO' logo="./assets/images/foto_profilo-jpg" mobileWidth=991 [linkArray]="linkArray"
+      type="div" primaryColor="#3a3a3a" secondaryColor="#f0f8ff"></app-header-hamburger>
   </div>
 </div>

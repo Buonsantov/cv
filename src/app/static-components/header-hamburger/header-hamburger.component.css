@@ -32,7 +32,7 @@
         display: -webkit-box!important;
     }
     .navBurgerPosition {
-        margin-top: 2.4rem;
+        margin-top: 0rem;
     }
     .underline {
         text-decoration: none!important;
@@ -184,4 +184,16 @@ li {
 
         margin-top: 1rem;
     }
+}
+
+.it-header-center-wrapper {
+    background:  var(--primaryColor)!important;
+}
+.nomeText{
+    color: white;
+    font-family: "Titillium Web";
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 48px;
 }

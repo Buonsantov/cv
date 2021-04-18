@@ -14,14 +14,18 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
   @Input() mobileWidth: number;
   @Input() primaryColor: string;
   @Input() secondaryColor: string;
+  @Input() type: string;
 
   // linkArray = [];
   header;
   sticky;
   showImage = false;
 
+  tipoLink = 'router';
+
   windowsWidth;
   selectOption: string;
+  selectDiv: string;
 
   loaded = false;
   mobile = false;
@@ -34,9 +38,13 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
   ) {
     this.checkWin();
     this.changeHeader();
+    this.configure();
 
   }
   configure() {
+    if (this.type) {
+      this.tipoLink = this.type;
+    }
     (this.el.nativeElement as HTMLElement).style.setProperty('--secondaryColor', this.secondaryColor);
     (this.el.nativeElement as HTMLElement).style.setProperty('--primaryColor', this.primaryColor);
     console.log('logo:', this.logo);
@@ -46,12 +54,7 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
 
 
   getArray() {
-    this.linkArray = [];
-    let link;
-    link = new HeaderObjLink('asd', '/cose-cv-local', 'cose-cv-local');
-    this.linkArray.push(link);
-    link = new HeaderObjLink('asd', '/normativa', 'normativa');
-    this.linkArray.push(link);
+
     return this.linkArray;
 
   }
@@ -159,6 +162,25 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
     if (window.location.pathname === link) {
       return true;
     } else { return false; }
+  }
+
+  divSelect(link) {
+    this.selectDiv = '';
+  }
+  goToDiv(link) {
+    this.selectDiv = '';
+  }
+
+  checkViewMenu(link) {
+
+    if (this.mobile) {
+      return true;
+    }
+    if (!this.mobile && link === 'contatti') {
+      return false;
+    }
+    return true;
+
   }
 
 

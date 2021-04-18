@@ -23,7 +23,7 @@
         padding: 0px!important;
     }
     .navBurgerPosition {
-        margin-top: 2.4rem;
+        margin-top: 0px;
     }
     .underline {
         text-decoration: none!important;
@@ -206,3 +206,59 @@ li {
     border-radius: 25px;
     max-width: 8rem;
 }
+
+.it-header-center-wrapper {
+    background:  #003366!important;
+}
+
+.callout:not(.callout-highlight):not(.callout-more) .callout-title {
+    position: absolute;
+    font-size: 1rem;
+    padding: 0 1.389rem;
+    background: transparent!important;
+    top: -.78em;
+}
+
+.callout {
+    padding: 1.5rem 0.222rem 0rem;
+    border: 1px solid white;
+    position: relative;
+    max-width: 140ch;
+    margin: 1.75rem 0 1rem;
+    border-radius: 8px;
+}
+.callout.contatti {
+    border-color: white;
+    width: 24rem;
+    height: 10rem;
+}
+.callout-cv.title{
+    background: #003366!important;
+    color: white;
+    padding: 0px 5px;
+}
+.listImage{
+    fill: white;
+    width: 20px;
+    margin: 4px;
+}
+.contattiText{
+    color: white;
+    font-family: "Titillium Web";
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 34px;
+}
+
+.nomeText{
+    color: white;
+    font-family: "Titillium Web";
+    margin-top: 6rem;
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 48px;
+    margin-right: 7rem;
+}
+
