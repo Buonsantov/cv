@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import anagraficaJson from 'src/assets/files/educazione.json';
+import educazione from 'src/assets/files/educazione.json';
 
 @Component({
   selector: 'app-educazione',
@@ -12,7 +12,7 @@ export class EducazioneComponent implements OnInit {
   info: any;
 
   constructor() {
-    const json = anagraficaJson.value;
+    const json = educazione.value;
     this.istruzioneModello = json;
     console.log(this.istruzioneModello);
   }

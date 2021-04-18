@@ -257,3 +257,8 @@ select {
 .collapse-body {
     padding: 12px 24px;
 }
+
+.circleImg{
+    border: 1px solid;
+    border-radius: 50%;
+}

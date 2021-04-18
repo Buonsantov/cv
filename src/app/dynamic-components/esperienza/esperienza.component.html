@@ -1,1 +1,129 @@
-<p>esperienza works!</p>
+<div class="componentBorder">
+    <div class="row">
+        <div class="col-12">
+            <!--start card-->
+            <div class="card-wrapper card-space">
+                <div class="card card-bg">
+                    <div>
+                        <!-- class="card-body" -->
+
+                        <div class="collapse-header  " id="headingEsperienze">
+                            <button data-toggle="collapse" data-target="#collapseEsperienze" aria-expanded="true"
+                                aria-controls="collapseEsperienze" style="border: none; background-color: white;">
+                                <h3 class="title-page">Esperienze</h3>
+                            </button>
+
+
+                            <div id="collapseEsperienze" class="collapse show" role="tabpanel"
+                                aria-labelledby="headingEsperienze">
+                                <div class="collapse-body">
+                                    <div class="row">
+                                        <hr class="aria-separator">
+                                        <div class="row w-100 p-2" *ngFor="let campo of lavoroModello; index as i">
+
+                                            <div class="col-12 col-md-2 alignColon spacing-top-1 d-grid">
+                                                <div class="textTipo ">
+                                                    {{campo.tipo | uppercase }}
+                                                </div>
+                                                <div class="textCorso ">
+                                                    {{campo.durataContratto | uppercase }}
+                                                </div>
+
+                                                <img class="listImage m-t-1 circleImg" src="{{campo.fotoAzienda}}"
+                                                    alt="cv-local">
+                                            </div>
+                                            <div class="col-12 col-md-10 alignColon spacing-top-1 d-grid">
+                                                <div class="row">
+                                                    <div class="col-12 col-md-10 alignColon spacing-top-1 d-grid">
+                                                        <div class="row">
+                                                            <div class="textDettalio col-12">
+                                                                {{campo.azienda | uppercase }}
+                                                            </div>
+                                                            <div class="textDettalio col-12">
+                                                                {{campo.luogo | uppercase }}
+                                                            </div>
+                                                            <div class="textDettalio col-12">
+                                                                {{campo.professione | uppercase }}
+                                                            </div>
+                                                            <div class="row w-100 p-2"
+                                                                >
+
+                                                                <div class="desc">
+                                                                    <ul *ngFor="let spec of getReverseList(campo.specifiche) ; index as ind">
+                                                                      <li >
+                                                                        <div class="textDettalio">{{spec.data}}</div>
+                                                                        <div class="textDettalio2">{{spec.ruolo}}</div>
+                                                                        <div class="textDettalio2">{{spec.info}}</div>
+                                                                      </li>
+                                                                    </ul>
+                                                                   
+                                                                  </div> 
+
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 btnInfo" *ngIf=" campo.maggioriInfo != null">
+                                                        <button type="button" class="btn clickable btnInfo"
+                                                            data-toggle="modal" data-target="#exampleModal2"
+                                                            style="padding-right: 0!important;"
+                                                            (click)="selezionaInfo(campo.maggioriInfo)">
+                                                            <span class="leggi-piu">INFORMAZIONI</span>
+                                                            <svg class="icon icon-sm" style="fill:#06c">
+                                                                <use
+                                                                    xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right">
+                                                                </use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <hr class="col-12 spacing-top-1  aria-separator" style="margin-top: 2rem;"
+                                                *ngIf="i < lavoroModello.length-1">
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end card-->
+        </div>
+    </div>
+
+
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" tabindex="-1" role="dialog" id="exampleModal2" *ngIf="info!==null"
+    style="position: fixed; top: 16%;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-border">
+            <div class="modal-header">
+                <div class="col-12">
+                    <div class="label-modale">
+                        <span class="modal-title">Informazioni aggiuntive</span>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-body col-12 textSpecifiche scrollModale">
+                <p>{{info}}</p>
+            </div>
+            <div class="modal-footer col-12" style="margin-top: 1rem;">
+                <button class="btn btn-primary btn-sm" style="width: 150px; color: white;" data-dismiss="modal"
+                    type="button">Chiudi</button>
+            </div>
+        </div>
+    </div>
+</div>
