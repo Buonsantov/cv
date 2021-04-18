@@ -1,0 +1,8 @@
+<div [class.hidden]="!show">
+  <div class="backdrop"></div>
+  <div class="loader-overlay">
+    <div *ngIf="show" class="progress-spinner progress-spinner-active size-sm">
+      <span class="sr-only">Caricamento</span>
+    </div>
+  </div>
+</div>

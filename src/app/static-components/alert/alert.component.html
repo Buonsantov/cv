@@ -1,0 +1,20 @@
+<div class="rnts-alert">
+    <div *ngIf="alertService.getShow()" class="container test-docs">
+        <div [ngClass]="alertService.getClasse()" class="rnts-notification d-flex align-items-center" role="alert"
+            aria-labelledby="idNotifica" id="not2">
+            <span id="idNotifica" class="notifica-message">
+                <svg class="icon">
+                    <use *ngIf="alertService.svg==='success'"
+                        xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#it-check-circle"></use>
+                    <use *ngIf="alertService.svg==='avvertenza'"
+                        xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#it-close-circle"></use>
+                    <use *ngIf="alertService.svg==='info'"
+                        xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#-info-circle"></use>
+                    <use *ngIf="alertService.svg==='error'"
+                        xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#it-error"></use>
+                </svg>
+                {{alertService.getMessaggio()}}
+            </span>
+        </div>
+    </div>
+</div>

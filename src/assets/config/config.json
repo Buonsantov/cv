@@ -1,0 +1,8 @@
+{
+ 
+    "project": "curriculum",
+    "hpOnly": false,
+    "test": true,
+    "logs": true,
+    "isProd": false
+}

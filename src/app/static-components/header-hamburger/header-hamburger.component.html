@@ -1,0 +1,102 @@
+<div class="it-header-navbar-wrapper d-flex align-items-center" id="myHeaderHamb">
+    <div >
+        <a class="nav-link d-lg-none d-xl-block" [routerLink]="['/']" *ngIf="showImage">
+            <div class="it-brand-text">
+                <img style="width: 65%;" src="./assets/images/cv-locallogo@3x.svg" alt="cv-locall">
+            </div>
+        </a>
+    </div>
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <div class="col-12">
+                <!--start nav-->
+                <nav class="navbar navbar-expand-lg has-megamenu" id="mobileHeader">
+                    <button class="custom-navbar-toggler" type="button" aria-controls="navHamburger"
+                        aria-expanded="false" aria-label="Toggle navigation" data-target="#navHamburger"
+                        (click)="openMenu()">
+                        <svg class="icon">
+                            <!-- <use xlink:href="#it-burger"></use> -->
+                            <use xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#it-burger"></use>
+                        </svg>
+                    </button>
+                    <div class="navbar-collapsable" id="navHamburger" style="display: none;">
+                        <div id="overlay" class="overlay" (click)="closeMenu()" style="display: none;">
+                        </div>
+                        <div class="close-div sr-only">
+                            <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
+                        </div>
+                        <div class="menu-wrapper" [ngClass]="mobile ? 'navBurgerPosition':'' ">
+
+
+                            <ul class="navbar-nav" [ngClass]="mobile ? 'navBurger':''">
+
+                                <li class="nav-item headerNav-custom">
+                                    <a [ngClass]="mobile ? 'no-decoretor nav-link':'d-none'" style="align-self: center;"
+                                        (click)="closeMenu()" [routerLink]="['/']"><span id="headerCosa"
+                                            [ngClass]="mobile ? 'single-head-sm-blue':''">{{title}}</span>
+
+                                        <span class="sr-only"> - </span></a>
+                                    <div class="closeIcon" [ngClass]="mobile ? 'no-decoretor nav-link':'d-none'"
+                                        (click)="closeMenu()">
+                                        <svg class="icon clickable">
+                                            <use xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#it-close">
+                                            </use>
+                                        </svg>
+                                    </div>
+                                </li>
+
+<!-- 
+                                <li [ngClass]="selectOption==='cose-cv-local' ? 'border-left-blue nav-item':'nav-item'">
+                                    <a [ngClass]="mobile ? 'no-decoretor nav-link':'nav-link'" (click)="closeMenu()"
+                                        [routerLink]="['/cose-cv-local']">
+                                        <div id="headerCosa" [ngClass]="mobile ? 'single-head-sm':'single-head'">
+                                            <span
+                                                [ngClass]="linkSelect('/cose-cv-local') && !mobile ? 'txtUnderline':'noTxtUnderline'">
+                                                cosa</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li [ngClass]="selectOption==='normativa' ? 'border-left-blue nav-item':'nav-item'">
+                                    <a [ngClass]="mobile ? 'no-decoretor nav-link':'nav-link'" (click)="closeMenu()"
+                                        [routerLink]="['/normativa']">
+                                        <div id="headerCosa" [ngClass]="mobile ? 'single-head-sm':'single-head'">
+                                            <span
+                                                [ngClass]="linkSelect('/normativa') && !mobile ? 'txtUnderline':'noTxtUnderline'">
+                                                norm</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li [ngClass]="selectOption==='iscrizione' ? 'border-left-blue nav-item':'nav-item'">
+                                    <a [ngClass]="mobile ? 'no-decoretor nav-link':'nav-link'" (click)="closeMenu()"
+                                        [routerLink]="['/iscrizione']">
+                                        <div id="headerCosa" [ngClass]="mobile ? 'single-head-sm':'single-head'">
+                                            <span
+                                                [ngClass]="linkSelect('/iscrizione') && !mobile ? 'txtUnderline':'noTxtUnderline'">
+                                                iscr</span>
+                                        </div>
+                                    </a>
+                                </li> -->
+                             
+                                
+
+                                 <div *ngFor="let link of getArray(); index as i">
+                                    <li
+                                        [ngClass]="selectOption===link.selfLink ? 'border-left-blue nav-item':'nav-item'">
+                                        <a [ngClass]="mobile ? 'no-decoretor nav-link':'nav-link'" (click)="closeMenu()"
+                                            [routerLink]="[link.link]">
+                                            <div id="headerCosa" [ngClass]="mobile ? 'single-head-sm':'single-head'">
+                                                <span
+                                                    [ngClass]="linkSelect(link.link) && !mobile ? 'txtUnderline':'noTxtUnderline'">
+                                                    {{link.title}}</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </div> 
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
