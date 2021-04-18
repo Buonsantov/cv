@@ -1,101 +1,45 @@
 .footer-cv {
     padding: 0rem 4rem;
 }
+
 .font-sm {
     font-size: 11px;
     line-height: 1rem;
 }
+
 .font-md {
     font-size: 12px;
 }
+
 .bg-cv {
     background-color: #1C2024;
 }
 
-.img-container{
+.img-container {
     padding: 3rem 0rem 1rem 0rem;
 }
 
-@media screen and (max-width: 767px) {
-    .ic-logo{
-        text-align: center!important;
-    }
-    .uc-logo{
-        text-align: center!important;
-        margin-bottom:2rem;
-    }
-    .note-legali{
-        
-        color: #FFFFFF;
-        font-family: "Titillium Web";
-        font-size: 16px;
-        letter-spacing: 0;
-        line-height: 24px;
-    }
-  
-  }
+@media screen and (max-width: 767px) {}
 
-  @media screen and (min-width: 768px) {
-    .ic-logo{
-        text-align: right!important;
-    }
-    .uc-logo{
-        text-align: left!important;
-    }
-    .note-legali{
-        
-        color: #FFFFFF;
-        font-family: "Titillium Web";
-        font-size: 16px;
-        letter-spacing: 0;
-        line-height: 24px;
-    }
-   
-  }
-  @media screen and (max-width: 991px) {
- 
-    .footer-info{
-        text-align: left!important;
-    }
-    .note-legali{
-        text-align: left!important; 
-        
-        color: #FFFFFF;
-        font-family: "Titillium Web";
-        font-size: 16px;
-        letter-spacing: 0;
-        line-height: 24px;
-    }
-   
-  }
+@media screen and (min-width: 768px) {}
 
-  @media screen and (min-width: 992px) {
- 
-    .footer-info{
-        text-align: right!important;
-    }
-    .note-legali{
-        text-align: left!important; 
-        color: #FFFFFF;
-        font-family: "Titillium Web";
-        font-size: 16px;
-        letter-spacing: 0;
-        line-height: 24px;
-    }
-   
-  }
-  a.white-color.footer-nl.font-md {
+@media screen and (max-width: 991px) {}
+
+@media screen and (min-width: 992px) {}
+
+a.white-color.footer-nl.font-md {
     text-decoration: none;
-  }
+}
 
-  .info-legali {
+.bg-cv {
+    min-height: 15rem;
+}
+
+.textFooter {
     color: #FFFFFF;
     font-family: "Titillium Web";
     font-size: 12px;
     letter-spacing: 0;
     line-height: 19px;
     text-align: right;
-  }
-  .bg-cv{
-      min-height: 15rem;
-  }
+}
