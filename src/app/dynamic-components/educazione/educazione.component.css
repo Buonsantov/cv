@@ -62,3 +62,29 @@
     position: relative;
     right: -15px;
 }
+.scrollModale{
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+.scrollModale {
+    scrollbar-color: #0066CC #F5F5F5;
+    scrollbar-width: thin;
+}
+
+.scrollModale::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+    border-radius: 26px!important;
+    background-color: #F5F5F5;
+}
+
+.scrollModale::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(104, 140, 240, 0.3);
+    border-radius: 26px!important;
+}
+
+.scrollModale::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #0066CC;
+}
