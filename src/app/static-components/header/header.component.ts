@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, DoCheck, OnInit } from '@angular/core';
 import { DownloadService } from 'src/app/services/download.service';
 import { HeaderObjLink } from '../header-hamburger/headerObj';
-const AUTH = 'auth-user-info_';
+import infoGenerali from 'src/assets/files/infoGenerali.json';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +11,7 @@ const AUTH = 'auth-user-info_';
 export class HeaderComponent implements OnInit, DoCheck, AfterViewInit {
 
 
+  infoGenerali;
 
   showImage = false;
   loaded = false;
@@ -22,8 +23,15 @@ export class HeaderComponent implements OnInit, DoCheck, AfterViewInit {
     public downloadService: DownloadService,
 
   ) {
+    this.popolaInfo();
     this.checkWin();
     this.popolaArray();
+  }
+
+  popolaInfo() {
+    const json = infoGenerali.value;
+    this.infoGenerali = json;
+    console.log(this.infoGenerali);
   }
 
   ngAfterViewInit(): void {
@@ -72,7 +80,8 @@ export class HeaderComponent implements OnInit, DoCheck, AfterViewInit {
   goToLink(link) {
     switch (link) {
       case 'linkedin':
-        window.open('https://www.linkedin.com/in/vito-buonsanto-83043b5b/', '_blank');
+        const url = this.infoGenerali.linkedin;
+        window.open(url, '_blank');
         break;
 
       default:
@@ -81,7 +90,7 @@ export class HeaderComponent implements OnInit, DoCheck, AfterViewInit {
   }
 
   download() {
-    this.downloadService.downloadCurriculum();
+    this.downloadService.downloadCurriculum(this.infoGenerali.curriculum);
   }
 
 }

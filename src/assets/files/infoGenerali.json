@@ -1,0 +1,11 @@
+{
+    "value":{
+        "nomeCandidato":"Buonsanto Vito",
+        "fotoProfilo":"./assets/images/foto_profilo.jpg",
+        "email":"buonsantovito@gmail.com",
+        "linkedin":"https://www.linkedin.com/in/vito-buonsanto-83043b5b/",
+        "nomeLinkedin":"buonsantovito",
+        "telefono":"3801969470",
+        "curriculum":"assets/files/CV_Almalaurea.pdf"
+    }
+}

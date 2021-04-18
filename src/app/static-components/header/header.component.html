@@ -15,14 +15,14 @@
                 <a [routerLink]="['/']">
                   <div class="it-brand-text d-none d-sm-none d-md-none d-lg-block" id="imgHead2">
                     <!-- text-align: -webkit-center; -->
-                    <img class="profiloImg" src="./assets/images/foto_profilo.jpg" alt="cv-local">
+                    <img class="profiloImg" src="{{infoGenerali.fotoProfilo}}" alt="cv-local">
                   </div>
                 </a>
               </div>
               <div class="it-right-zone d-none d-sm-none d-md-none d-lg-flex" style="width: 300rem;">
 
 
-                <div class="nomeText">BUONSANTO VITO</div>
+                <div class="nomeText">{{infoGenerali.nomeCandidato | uppercase}} </div>
 
                 <!-- COLLOUT CONTATTI-->
 
@@ -39,15 +39,15 @@
                     <ul style="list-style-type: none;">
 
                       <li class="contattiText">
-                        <img class="listImage" style="width:17px" src="./assets/images/call_svg.svg" alt="cv-local"> 3801969470
+                        <img class="listImage" style="width:17px" src="./assets/images/call_svg.svg" alt="cv-local"> {{infoGenerali.telefono}} 
                       </li>
                       <li class="contattiText">
                         <img class="listImage" src="./assets/images/mail_svg.svg" alt="cv-local">
-                        buonsantovito@gmail.com
+                        {{infoGenerali.email}}
                       </li>
                       <li class="contattiText"><a (click)="goToLink('linkedin')" class="cliccable">
                           <img class="listImage" src="./assets/images/linkedin_svg.svg" alt="cv-local"
-                            > buonsantovito
+                            >  {{infoGenerali.nomeLinkedin}} 
                         </a>
                       </li>
                       <li class="contattiText"><a (click)="download()" class="cliccable">
