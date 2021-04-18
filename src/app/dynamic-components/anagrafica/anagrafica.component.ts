@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import anagraficaJson from './model/anagrafica.json';
+import anagraficaJson from 'src/assets/files/anagrafica.json';
 @Component({
   selector: 'app-anagrafica',
   templateUrl: './anagrafica.component.html',

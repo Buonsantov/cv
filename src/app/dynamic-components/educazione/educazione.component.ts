@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import anagraficaJson from 'src/assets/files/educazione.json';
 
 @Component({
   selector: 'app-educazione',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducazioneComponent implements OnInit {
 
-  constructor() { }
+  istruzioneModello;
+  info: any;
+
+  constructor() {
+    const json = anagraficaJson.value;
+    this.istruzioneModello = json;
+    console.log(this.istruzioneModello);
+  }
 
   ngOnInit(): void {
+  }
+
+  selezionaInfo(n) {
+    this.info = n;
   }
 
 }

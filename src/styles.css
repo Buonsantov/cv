@@ -236,9 +236,18 @@ select {
     line-height: 32px;
 }
 
-.componentBorder{
-    margin: 2rem 5rem;
+@media (min-width: 992px) {
+    .componentBorder{
+        margin: 2rem 5rem;
+    }
 }
+@media (max-width: 991px) {
+    .componentBorder{
+        margin: 2rem 1rem;
+    }
+}
+
+
 .aria-separator{
     width: 100%;
     margin-top: -1rem;

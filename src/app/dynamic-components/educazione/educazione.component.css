@@ -1,0 +1,64 @@
+.listImage{
+    width: 100px;
+    margin-top: 10px;
+}
+.textTipo{
+    color: #5c6f82;
+    font-family: "Titillium Web";
+    font-size: 25px;
+    font-weight: bold!important;
+    letter-spacing: 0;
+    line-height: 32px;
+}
+.textCorso{
+    color: #5c6f82;
+    font-family: "Titillium Web";
+    font-size: 20px;
+    font-weight: bold!important;
+    letter-spacing: 0;
+    line-height: 32px;
+}
+.textDettalio{
+    color: #5c6f82;
+    font-family: "Titillium Web";
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+.textSpecifiche{
+    color: #5c6f82;
+    font-family: "Titillium Web";
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+.btnInfo{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+.leggi-piu {
+    color: #0066CC;
+    font-family: "Titillium Web";
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 21px;
+}
+.modal-title{
+    color: #5c6f82;
+    font-family: "Titillium Web";
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+.btnInfo{
+    padding-right: 0!important;
+    position: relative;
+    right: -15px;
+}
