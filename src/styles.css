@@ -45,14 +45,7 @@
     border: 2px solid rgba(0, 43, 85, 0.1);
 }
 
-.rnts-card-subtitle {
-    color: #1C2024;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 0;
-    line-height: 21px;
-    margin-bottom: 1rem!important;
-}
+
 
 @media (min-width: 992px) {
     .it-header-slim-wrapper {
@@ -62,7 +55,7 @@
     .it-header-center-wrapper {
         height: 163px;
     }
-    .rnts-card-title {
+    .card-title {
         font-size: 24px!important;
         color: #06c!important;
         margin-bottom: 0px!important;
@@ -105,29 +98,6 @@ div.dropdown-menu.show {
     width: auto!important;
 }
 
-.black-rnts {
-    font-weight: 900!important;
-}
-
-.bold-rnts {
-    font-weight: 700!important;
-}
-
-.semibold-rnts {
-    font-weight: 600!important;
-}
-
-.regular-rnts {
-    font-weight: 400!important;
-}
-
-.light-rnts {
-    font-weight: 300!important;
-}
-
-.extralight-rnts {
-    font-weight: 200!important;
-}
 
 .subtitle {
     color: #0066CC;

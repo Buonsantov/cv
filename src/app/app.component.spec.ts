@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'rnts-h'`, () => {
+  it(`should have as title 'cv-h'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('rnts-h');
+    expect(app.title).toEqual('cv-h');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('rnts-h app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('cv-h app is running!');
   });
 });

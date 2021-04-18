@@ -1,11 +1,11 @@
-.rnts-alert {
+.cv-alert {
     position: fixed;
     bottom: 100px;
     left: 100px;
     z-index: 1000;
 }
 
-.rnts-notification {
+.cv-notification {
     background-color: white;
     min-width: 300px;
     padding: 1rem 3rem 1rem 1rem;
@@ -22,18 +22,18 @@
     font-weight: 600!important;
 }
 
-.rnts-notification.with-icon.success {
+.cv-notification.with-icon.success {
     border-color: #008758!important;
 }
 
-.rnts-notification.with-icon.error {
+.cv-notification.with-icon.error {
     border-color: #d9364f!important;
 }
 
-.rnts-notification.with-icon.info {
+.cv-notification.with-icon.info {
     border-color: #06c!important;
 }
 
-.rnts-notification.with-icon.warning {
+.cv-notification.with-icon.warning {
     border-color: #a66300!important;
 }

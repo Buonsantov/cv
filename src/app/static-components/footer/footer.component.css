@@ -1,4 +1,4 @@
-.footer-rnts {
+.footer-cv {
     padding: 0rem 4rem;
 }
 .font-sm {
@@ -8,7 +8,7 @@
 .font-md {
     font-size: 12px;
 }
-.bg-rnts {
+.bg-cv {
     background-color: #1C2024;
 }
 
@@ -95,4 +95,7 @@
     letter-spacing: 0;
     line-height: 19px;
     text-align: right;
+  }
+  .bg-cv{
+      min-height: 15rem;
   }
