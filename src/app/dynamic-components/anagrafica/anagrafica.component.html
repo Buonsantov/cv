@@ -1,1 +1,41 @@
-<p>anagrafica works!</p>
+<div class="componentBorder">
+    <div class="row">
+        <div class="col-12">
+            <!--start card-->
+            <div class="card-wrapper card-space">
+                <div class="card card-bg">
+                    <div>
+                        <!-- class="card-body" -->
+
+                        <div class="collapse-header  " id="headingAnagrafica">
+                            <button data-toggle="collapse" data-target="#collapseAnagrafica" aria-expanded="true"
+                                aria-controls="collapseAnagrafica" style="border: none; background-color: white;">
+                                <h3 class="title-page">Anagrafica</h3>
+                            </button>
+
+
+                            <div id="collapseAnagrafica" class="collapse show" role="tabpanel"
+                                aria-labelledby="headingAnagrafica">
+                                <div class="collapse-body">
+                                    <div class="row">
+                                        <hr class="aria-separator">
+                                        <div class="col-12 col-md-4 alignColon spacing-top-1 d-grid"  *ngFor="let campo of anagraficaModello">
+                                            <div class="textStep ">                                             
+                                                <b>{{campo.campo}}: </b>
+                                                {{campo.valore}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end card-->
+        </div>
+    </div>
+
+
+</div>

@@ -166,9 +166,11 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
 
   divSelect(link) {
     this.selectDiv = '';
+    return false;
   }
   goToDiv(link) {
     this.selectDiv = '';
+    return false;
   }
 
   checkViewMenu(link) {
