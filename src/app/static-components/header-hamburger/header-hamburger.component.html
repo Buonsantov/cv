@@ -61,9 +61,9 @@
                                     </li>
                                     <li *ngIf="checkViewMenu(link.link)"
                                         [ngClass]="selectDiv===link.selfLink ? 'border-left-blue nav-item':'nav-item'">
-                                        <a [ngClass]="mobile ? 'no-decoretor nav-link':'nav-link'" (click)="closeMenu()"
+                                        <a [ngClass]="mobile ? 'no-decoretor nav-link':'nav-link clickable'" (click)="closeMenu()"
                                         
-                                        (click)="goToDiv(link)">
+                                        (click)="goToDiv(link.link)">
                                             <div id="headerCosa" [ngClass]="mobile ? 'single-head-sm':'single-head'">
                                                 <span
                                                     [ngClass]="divSelect(link.link) && !mobile ? 'txtUnderline':'noTxtUnderline'">

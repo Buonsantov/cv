@@ -19,7 +19,6 @@ import { LoaderComponent } from './static-components/loader/loader.component';
 import { HomePageComponent } from './dynamic-components/home-page/home-page.component';
 import { AnagraficaComponent } from './dynamic-components/anagrafica/anagrafica.component';
 import { EsperienzaComponent } from './dynamic-components/esperienza/esperienza.component';
-import { LavoroComponent } from './dynamic-components/lavoro/lavoro.component';
 import { ContattiComponent } from './dynamic-components/contatti/contatti.component';
 import { SkillComponent } from './dynamic-components/skill/skill.component';
 import { EducazioneComponent } from './dynamic-components/educazione/educazione.component';
@@ -43,7 +42,6 @@ export function appInit(appConfigService: ConfigService) {
         HomePageComponent,
         AnagraficaComponent,
         EsperienzaComponent,
-        LavoroComponent,
         ContattiComponent,
         SkillComponent,
         EducazioneComponent

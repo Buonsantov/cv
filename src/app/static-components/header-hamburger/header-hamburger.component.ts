@@ -34,6 +34,8 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
   headMob: HTMLElement;
   infoGenerali: any;
 
+  altezze = [];
+
   constructor(
     private el: ElementRef
   ) {
@@ -172,14 +174,64 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
     } else { return false; }
   }
 
+
+  calculateDiv() {
+    this.altezze = [];
+
+    this.linkArray.forEach(element => {
+      const box = document.getElementById(element.link + 'Component');
+      const height = box.offsetTop;
+      this.altezze.push(height);
+    });
+  }
+
   divSelect(link) {
     this.selectDiv = '';
+
+    const currentHeight = $('#' + link).height();
+
+    const box = document.getElementById(link + 'Component');
+    const width = box.offsetWidth;
+    const height = box.offsetTop;
+
+    let div = null;
+    for (let index = 0; index < this.linkArray.length; index++) {
+      if (this.linkArray[index].link === link) {
+        div = index;
+      }
+    }
+
+    let hPage = document.documentElement.scrollTop || document.body.scrollTop;
+    hPage += 150;
+    if (div < this.linkArray.length - 1) {
+
+      const divSucc = this.altezze[div + 1];
+      if (hPage >= height && hPage < divSucc) {
+        return true;
+      } else {
+        return false;
+      }
+
+    }
     return false;
   }
-  goToDiv(link) {
+  goToDiv(divID) {
     this.selectDiv = '';
-    return false;
+
+    let move = 180;
+    if (this.mobile) {
+      move = 100;
+    }
+    setTimeout(() => {
+      const idElem = '#' + divID;
+      $([document.documentElement, document.body]).animate({
+        scrollTop: $(idElem).offset().top - move
+      }, 100);
+      return false;
+    }, 50);
   }
+
+
 
   checkViewMenu(link) {
 
