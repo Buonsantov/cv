@@ -1,1 +1,132 @@
-<p>contatti works!</p>
+<div class="componentBorder" style="margin-top: 6rem!important;">
+    <div class="row">
+        <div class="col-12">
+            <!--start card-->
+            <div class="card-wrapper card-space">
+                <div class="card card-bg">
+                    <div>
+                        <!-- class="card-body" -->
+
+                        <div class="collapse-header  " id="headingContatti">
+                            <button data-toggle="collapse" data-target="#collapseContatti" aria-expanded="true"
+                                aria-controls="collapseContatti" style="border: none; background-color: white;">
+                                <h3 class="title-page">Contatti</h3>
+                            </button>
+
+
+                            <div id="collapseContatti" class="collapse show" role="tabpanel"
+                                aria-labelledby="headingContatti">
+                                <div class="collapse-body">
+                                    <div class="row">
+                                        <hr class="aria-separator">
+                                        <div class="nomeText col-12 " *ngIf="!mobile">{{infoGenerali.nomeCandidato |
+                                            uppercase}}
+                                        </div>
+                                        <div class="col-4 alignColon spacing-top-1 d-grid">
+                                            <div class="textStep ">
+                                                <div class="it-brand-text" id="imgHead2" style="display:inline-flex;">
+                                                    <img class="profiloImg" src="{{infoGenerali.fotoProfilo}}"
+                                                        alt="cv-local">
+
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="nomeText col-12" *ngIf="mobile">
+                                            {{infoGenerali.nomeCandidato | uppercase}}
+                                        </div>
+                                        <div class="nomeText row d-block d-sm-none" *ngIf="mobile">
+                                            <div>
+                                                <ul style="list-style-type: none; padding:0">
+
+                                                    <li class="contattiText">
+                                                        <img class="listImage"
+                                                            style="width:17px; fill:#5c6f82!important"
+                                                            src="./assets/images/call_svg_g.svg" alt="cv-local">
+                                                        {{infoGenerali.telefono}}
+                                                    </li>
+                                                    <li class="contattiText">
+                                                        <img class="listImage" src="./assets/images/mail_svg_g.svg"
+                                                            alt="cv-local">
+                                                        {{infoGenerali.email}}
+                                                    </li>
+                                                    <li class="contattiText"><a (click)="goToLink('linkedin')"
+                                                            class="cliccable">
+                                                            <img class="listImage"
+                                                                src="./assets/images/linkedin_svg_g.svg"
+                                                                alt="cv-local">
+                                                            {{infoGenerali.nomeLinkedin}}
+                                                        </a>
+                                                    </li>
+                                                    <li class="contattiText"><a (click)="download()"
+                                                            class="cliccable">
+                                                            <img class="listImage"
+                                                                src="./assets/images/download_g.svg" alt="cv-local">
+                                                            Curriculum
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col d-none d-sm-block">
+                                            <div class="callout contatti" style="width: 100%;">
+                                                <div class="callout-title">
+                                                    <div class="callout-cv title">
+                                                        <svg class="icon" style="fill: #5c6f82; color:#5c6f82">
+                                                            <use
+                                                                xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#it-info-circle">
+                                                            </use>
+                                                        </svg>
+                                                        Contatti
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <ul style="list-style-type: none;">
+
+                                                        <li class="contattiText">
+                                                            <img class="listImage"
+                                                                style="width:17px; fill:#5c6f82!important"
+                                                                src="./assets/images/call_svg_g.svg" alt="cv-local">
+                                                            {{infoGenerali.telefono}}
+                                                        </li>
+                                                        <li class="contattiText">
+                                                            <img class="listImage" src="./assets/images/mail_svg_g.svg"
+                                                                alt="cv-local">
+                                                            {{infoGenerali.email}}
+                                                        </li>
+                                                        <li class="contattiText"><a (click)="goToLink('linkedin')"
+                                                                class="cliccable">
+                                                                <img class="listImage"
+                                                                    src="./assets/images/linkedin_svg_g.svg"
+                                                                    alt="cv-local">
+                                                                {{infoGenerali.nomeLinkedin}}
+                                                            </a>
+                                                        </li>
+                                                        <li class="contattiText"><a (click)="download()"
+                                                                class="cliccable">
+                                                                <img class="listImage"
+                                                                    src="./assets/images/download_g.svg" alt="cv-local">
+                                                                Curriculum
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end card-->
+        </div>
+    </div>
+
+
+</div>

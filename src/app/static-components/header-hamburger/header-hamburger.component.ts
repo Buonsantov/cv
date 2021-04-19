@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, DoCheck, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 import { HeaderObjLink } from './headerObj';
-
+import infoGenerali from 'src/assets/files/infoGenerali.json';
 @Component({
   selector: 'app-header-hamburger',
   templateUrl: './header-hamburger.component.html',
@@ -19,7 +19,7 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
   // linkArray = [];
   header;
   sticky;
-  showImage = false;
+  show = false;
 
   tipoLink = 'router';
 
@@ -32,10 +32,12 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
 
   stickyMob: any;
   headMob: HTMLElement;
+  infoGenerali: any;
 
   constructor(
     private el: ElementRef
   ) {
+    this.popolaInfo();
     this.checkWin();
     this.changeHeader();
     this.configure();
@@ -50,6 +52,12 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
     console.log('logo:', this.logo);
     /*     @Input() primaryColor = '#0066CC';
         @Input() secondaryColor = '#f0f8ff'; */
+  }
+
+  popolaInfo() {
+    const json = infoGenerali.value;
+    this.infoGenerali = json;
+    console.log(this.infoGenerali);
   }
 
 
@@ -101,20 +109,20 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
         const allListElements = $('.it-header-wrapper');
         allListElements.addClass('mobileFixed');
         // console.log('position: ', allListElements);
-        this.showImage = false;
+        this.show = false;
       } else {
         if ($('.it-header-wrapper')) {
           const allListElements = $('.it-header-wrapper');
           allListElements.removeClass('mobileFixed');
-          this.showImage = false;
+          this.show = false;
         }
 
         if (window.pageYOffset > this.sticky) {
           $('#myHeaderHamb').addClass('sticky');
-          this.showImage = true;
+          this.show = true;
         } else {
           $('#myHeaderHamb').removeClass('sticky');
-          this.showImage = false;
+          this.show = false;
         }
       }
     }

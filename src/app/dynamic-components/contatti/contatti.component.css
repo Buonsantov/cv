@@ -1,0 +1,70 @@
+
+
+
+.nomeText{
+    color: #5c6f82;
+    font-family: "Titillium Web";
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 48px;
+}
+
+.callout:not(.callout-highlight):not(.callout-more) .callout-title {
+    position: absolute;
+    font-size: 1rem;
+    padding: 0 1.389rem;
+    background: transparent!important;
+    top: -.78em;
+}
+
+.callout {
+    padding: 1.5rem 0.222rem 0rem;
+    border: 1px solid #5c6f82;
+    position: relative;
+    max-width: 140ch;
+    margin: 1.75rem 0 1rem;
+    border-radius: 8px;
+}
+.callout.contatti {
+    border-color: #5c6f82;
+    width: 24rem;
+    height: 10rem;
+}
+.callout-cv.title{
+    background: white!important;
+    color: #5c6f82;
+    padding: 0px 5px;
+}
+.listImage{
+    fill: #5c6f82;
+    width: 20px;
+    margin: 4px;
+}
+.contattiText{
+    color: #5c6f82;
+    font-family: "Titillium Web";
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 34px;
+}
+
+
+@media screen and (min-width: 676px) {
+    .profiloImg {
+        border: 1px solid;
+        border-radius: 25px;
+        max-width: 182px;
+        margin-top: 13px;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .profiloImg {
+        border: 1px solid;
+        border-radius: 25px;
+        max-width: 8rem;
+    }
+}
+

@@ -1,15 +1,15 @@
 <div class="it-header-navbar-wrapper d-flex align-items-center" id="myHeaderHamb">
     <div>
-        <a class="nav-link d-lg-none d-xl-block" [routerLink]="['/']" *ngIf="showImage">
+        <a class="nav-link d-lg-none d-xl-block" [routerLink]="['/']" *ngIf="show">
             <div class="it-brand-text">
                <!--  <img style="width: 65%;" src="./assets/images/cv-locallogo@3x.svg" alt="cv-locall"> -->
-               <div class="nomeText">BUONSANTO VITO</div>
+               <div class="nomeText">{{infoGenerali.nomeCandidato | uppercase}}</div>
             </div>
         </a>
     </div>
     <div class="container d-flex justify-content-center">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12" style="display: inline-flex;">
                 <!--start nav-->
                 <nav class="navbar navbar-expand-lg has-megamenu" id="mobileHeader">
                     <button class="custom-navbar-toggler" type="button" aria-controls="navHamburger"
@@ -20,6 +20,7 @@
                             <use xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#it-burger"></use>
                         </svg>
                     </button>
+                    
                     <div class="navbar-collapsable" id="navHamburger" style="display: none;">
                         <div id="overlay" class="overlay" (click)="closeMenu()" style="display: none;">
                         </div>
@@ -75,6 +76,10 @@
                         </div>
                     </div>
                 </nav>
+
+                <div>
+                    <div class="nomeText" *ngIf="mobile">{{infoGenerali.nomeCandidato | uppercase}}</div>
+                </div>
             </div>
         </div>
     </div>
