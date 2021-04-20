@@ -1,0 +1,13 @@
+.textTipo{
+    color: #5c6f82;
+    font-family: "Titillium Web";
+    font-size: 25px;
+    font-weight: bold!important;
+    letter-spacing: 0;
+    line-height: 32px;
+}
+svg {
+    height: 145px;
+    overflow: hidden;
+    vertical-align: middle;
+}

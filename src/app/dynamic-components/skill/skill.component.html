@@ -19,9 +19,82 @@
                                 <div class="collapse-body">
                                     <div class="row">
                                         <hr class="aria-separator">
-                                        <div class="col-12 col-md-4 alignColon spacing-top-1 d-grid" >
-                                        
+
+                                        <div class="row w-100">
+
+                                            <div
+                                                class="textTipo col-12 col-md-4 alignColon textStep spacing-top-1 d-grid">
+                                                LINGUE:
+                                            </div>
+                                            <div class="col-12 col-md-4 alignColon textStep spacing-top-1 d-grid">
+                                                <ul>
+                                                    <li *ngFor="let lingua of skillModello.lingue">
+                                                        <b>{{lingua.campo | uppercase}}:</b> {{lingua.livello}}
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
+
+                                        <hr class="aria-separator" style="margin-top: 2rem!important;">
+
+
+                                        <div class="row w-100" *ngFor="let competenze of skillModello.competenze">
+
+                                            <div
+                                                class="textTipo col-12 col-md-4 alignColon textStep spacing-top-1 d-grid">
+                                                COMPETENZE {{competenze.tipo | uppercase}}:
+                                            </div>
+                                            <div class="col-12 col-md-4 alignColon textStep spacing-top-1 d-grid">
+
+                                                <ul>
+                                                    <li *ngFor="let comp of competenze.valori">
+                                                        <b>{{comp.campo | uppercase}}:</b>
+                                                        <div class="textStep" *ngFor="let c of comp.valori">
+                                                            {{c.campo}} ({{c.livello}})
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <hr class="aria-separator" style="margin-top: 2rem!important;">
+
+
+                                        <div class="row w-100">
+
+                                            <div
+                                                class="textTipo col-12 col-md-4 alignColon textStep spacing-top-1 d-grid">
+                                                SOFT SKILL:
+                                            </div>
+                                            <div class="col-12 col-md-8 alignColon textStep spacing-top-1 d-grid">
+
+                                                <div class="row w-100">
+                                                    <div class="col-12 col-sm-6 col-md-6 col-lg-4 alignColon textStep spacing-top-1 d-grid"
+                                                        *ngFor="let skill of skillModello.softSkill">
+
+                                                        <div style="text-align-last: center;">
+                                                            
+                                                            <circle-progress [percent]="skill.abilita" [radius]="100"
+                                                                [outerStrokeWidth]="8" [innerStrokeWidth]="4"
+                                                                [outerStrokeColor]="'#06c'"
+                                                                [innerStrokeColor]="'#003366'" [animation]="true"
+                                                                [animationDuration]="300" [imageWidth]=40
+                                                                [subtitle]="skill.campo"
+                                                                [subtitleFontSize]="'16'"
+                                                                [imageHeight]=40>
+                                                            </circle-progress>
+                                                              <!--   <div class="textStep d-flex justify-content-center" style="font-size: 15px;">
+                                                                    <b>{{skill.campo | uppercase}}</b>
+                                                                </div> -->
+                                                                
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>

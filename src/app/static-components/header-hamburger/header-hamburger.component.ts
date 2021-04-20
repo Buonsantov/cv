@@ -188,30 +188,33 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
   divSelect(link) {
     this.selectDiv = '';
 
-    const currentHeight = $('#' + link).height();
+
 
     const box = document.getElementById(link + 'Component');
-    const width = box.offsetWidth;
-    const height = box.offsetTop;
+    if (box) {
+      const width = box.offsetWidth;
+      const height = box.offsetTop;
 
-    let div = null;
-    for (let index = 0; index < this.linkArray.length; index++) {
-      if (this.linkArray[index].link === link) {
-        div = index;
-      }
-    }
-
-    let hPage = document.documentElement.scrollTop || document.body.scrollTop;
-    hPage += 150;
-    if (div < this.linkArray.length - 1) {
-
-      const divSucc = this.altezze[div + 1];
-      if (hPage >= height && hPage < divSucc) {
-        return true;
-      } else {
-        return false;
+      let div = null;
+      for (let index = 0; index < this.linkArray.length; index++) {
+        if (this.linkArray[index].link === link) {
+          div = index;
+        }
       }
 
+      let hPage = document.documentElement.scrollTop || document.body.scrollTop;
+      hPage += 150;
+      if (div < this.linkArray.length - 1) {
+
+        const divSucc = this.altezze[div + 1];
+        if (hPage >= height && hPage < divSucc) {
+          return true;
+        } else {
+          return false;
+        }
+
+      }
+      return false;
     }
     return false;
   }

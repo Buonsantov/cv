@@ -22,6 +22,7 @@ import { EsperienzaComponent } from './dynamic-components/esperienza/esperienza.
 import { ContattiComponent } from './dynamic-components/contatti/contatti.component';
 import { SkillComponent } from './dynamic-components/skill/skill.component';
 import { EducazioneComponent } from './dynamic-components/educazione/educazione.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 /**
  *  Da importare per avere la configurazione al boot
@@ -52,7 +53,20 @@ export function appInit(appConfigService: ConfigService) {
         NgbModule,
         BrowserModule,
         AppRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+
+        // Specify ng-circle-progress as an import
+        NgCircleProgressModule.forRoot({
+            // set defaults here
+            radius: 100,
+            outerStrokeWidth: 16,
+            innerStrokeWidth: 8,
+            outerStrokeColor: '#78C000',
+            innerStrokeColor: '#C7E596',
+            animationDuration: 300,
+            imageHeight: 30,
+            imageWidth: 30
+        })
     ],
     providers: [
         ConfigService,
