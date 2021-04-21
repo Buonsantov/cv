@@ -1,1 +1,4 @@
- ng deploy --base-href=/cv/
+git remote remove origin
+git remote add origin https://github.com/<username>/<repo>.git
+ng add angular-cli-ghpages
+ [deploy]    ng deploy --base-href=/cv/
