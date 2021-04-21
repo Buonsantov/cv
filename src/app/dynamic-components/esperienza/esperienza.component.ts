@@ -9,10 +9,14 @@ export class EsperienzaComponent implements OnInit {
 
   lavoroModello;
   info;
+
+  reverseListOfExp = [];
+
   constructor() {
     const json = lavoroJson.value;
     this.lavoroModello = json;
     console.log(this.lavoroModello);
+    this.getReverseListExp();
   }
 
   ngOnInit(): void {
@@ -21,8 +25,20 @@ export class EsperienzaComponent implements OnInit {
   selezionaInfo(n) {
     this.info = n;
   }
-  getReverseList(list) {
-    return list.reverse();
+  getReverseListExp() {
 
+    if (this.lavoroModello) {
+      if (this.lavoroModello.length) {
+
+        this.lavoroModello.forEach(campo => {
+          if (campo.specifiche) {
+            if (campo.specifiche.length) {
+              campo.specifiche.reverse();
+            }
+          }
+
+        });
+      }
+    }
   }
 }

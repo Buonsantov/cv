@@ -4,7 +4,7 @@ import { HomePageComponent } from './dynamic-components/home-page/home-page.comp
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: '**', component: PageNotFoundComponent },
+  { path: '**', component: HomePageComponent },
 
 ];
 
