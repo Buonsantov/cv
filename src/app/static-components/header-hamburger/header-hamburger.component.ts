@@ -2,6 +2,8 @@ import { AfterViewInit, Component, DoCheck, ElementRef, HostListener, Input, OnI
 import { HeaderObjLink } from './headerObj';
 import infoGenerali from 'src/assets/files/infoGenerali.json';
 import { LinguaService } from 'src/app/services/lingua.service';
+import prop from 'src/assets/files/prop.json';
+
 @Component({
   selector: 'app-header-hamburger',
   templateUrl: './header-hamburger.component.html',
@@ -37,6 +39,8 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
 
   altezze = [];
 
+  multilingua;
+
   constructor(
     private el: ElementRef,
     public linguaService: LinguaService
@@ -59,6 +63,7 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
   }
 
   popolaInfo() {
+    this.multilingua = prop.multilingue;
     const json = infoGenerali.lingue[this.linguaService.getLingua()].value;
     this.infoGenerali = json;
     console.log(this.infoGenerali);

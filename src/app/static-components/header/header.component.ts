@@ -3,6 +3,7 @@ import { DownloadService } from 'src/app/services/download.service';
 import { HeaderObjLink } from '../header-hamburger/headerObj';
 import infoGenerali from 'src/assets/files/infoGenerali.json';
 import { LinguaService } from 'src/app/services/lingua.service';
+import prop from 'src/assets/files/prop.json';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,7 @@ export class HeaderComponent implements OnInit, DoCheck, AfterViewInit {
 
 
   infoGenerali;
-
+  multilingua;
   showImage = false;
   loaded = false;
   mobile = false;
@@ -31,6 +32,7 @@ export class HeaderComponent implements OnInit, DoCheck, AfterViewInit {
   }
 
   popolaInfo() {
+    this.multilingua = prop.multilingue;
     const json = infoGenerali.lingue[this.linguaService.getLingua()].value;
     this.infoGenerali = json;
     console.log(this.infoGenerali);
