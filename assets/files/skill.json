@@ -1,146 +1,320 @@
 {
-    "value": {
-        "softSkill": [
-            {
-                "campo": "Autonomia",
-                "abilita": 80
-            },
-            {
-                "campo": "Fiducia in se stessi",
-                "abilita": 80
-            },
-            {
-                "campo": "Resistenza allo stress",
-                "abilita": 80
-            },
-            {
-                "campo": "Capacità organizzativa",
-                "abilita": 70
-            },
-            {
-                "campo": "Gestione informazioni",
-                "abilita": 80
-            },
-            {
-                "campo": "Precisione ai dettagli",
-                "abilita": 85
-            },
-            {
-                "campo": "Conseguire obiettivi",
-                "abilita": 80
-            },
-            {
-                "campo": "Problem Solving",
-                "abilita": 90
-            },
-            {
-                "campo": "Capacità comunicativa",
-                "abilita": 70
-            },
-            {
-                "campo": "Problem Solving",
-                "abilita": 85
-            }
-        ],
-        "lingue": [
-            {
-                "campo": "Italiano",
-                "livello": "Madrelingua"
-            },
-            {
-                "campo": "Inglese",
-                "livello": "B2"
-            }
-        ],
-        "competenze": [
-            {
-                "tipo": "Informatiche",
-                "valori": [
+    "lingue": {
+        "it": {
+            "value": {
+                "competenzeLB":"Competenze",
+                "lingueLB":"LINGUE",
+                "softSkillLB":"Soft Skill",
+                "softSkill": [
                     {
-                        "campo": "OFFICE AUTOMATION",
+                        "campo": "Autonomia",
+                        "abilita": 80
+                    },
+                    {
+                        "campo": "Fiducia in se stessi",
+                        "abilita": 80
+                    },
+                    {
+                        "campo": "Resistenza allo stress",
+                        "abilita": 80
+                    },
+                    {
+                        "campo": "Capacità organizzativa",
+                        "abilita": 70
+                    },
+                    {
+                        "campo": "Gestione informazioni",
+                        "abilita": 80
+                    },
+                    {
+                        "campo": "Precisione ai dettagli",
+                        "abilita": 85
+                    },
+                    {
+                        "campo": "Conseguire obiettivi",
+                        "abilita": 80
+                    },
+                    {
+                        "campo": "Problem Solving",
+                        "abilita": 90
+                    },
+                    {
+                        "campo": "Capacità comunicativa",
+                        "abilita": 70
+                    },
+                    {
+                        "campo": "Problem Solving",
+                        "abilita": 85
+                    }
+                ],
+                "lingue": [
+                    {
+                        "campo": "Italiano",
+                        "livello": "Madrelingua"
+                    },
+                    {
+                        "campo": "Inglese",
+                        "livello": "B2"
+                    }
+                ],
+                "competenze": [
+                    {
+                        "tipo": "Informatiche",
                         "valori": [
                             {
-                                "campo": "Elaborazione testi",
-                                "livello": "Alto"
+                                "campo": "OFFICE AUTOMATION",
+                                "valori": [
+                                    {
+                                        "campo": "Elaborazione testi",
+                                        "livello": "Alto"
+                                    },
+                                    {
+                                        "campo": "Fogli elettronici",
+                                        "livello": "Alto"
+                                    },
+                                    {
+                                        "campo": "Web Browser",
+                                        "livello": "Alto"
+                                    }
+                                ]
                             },
                             {
-                                "campo": "Fogli elettronici",
-                                "livello": "Alto"
-                            },{
-                                "campo": "Web Browser",
-                                "livello": "Alto"
-                            }
-                        
-                        ]
-                    }, {
-                        "campo": "Ambienti di sviluppo",
-                        "valori": [
-                            {
-                                "campo": "Visual Studio Code",
-                                "livello": "Alto"
+                                "campo": "Ambienti di sviluppo",
+                                "valori": [
+                                    {
+                                        "campo": "Visual Studio Code",
+                                        "livello": "Alto"
+                                    },
+                                    {
+                                        "campo": "Eclipse",
+                                        "livello": "Alto"
+                                    },
+                                    {
+                                        "campo": "Visual Studio",
+                                        "livello": "Medio"
+                                    },
+                                    {
+                                        "campo": "Unity 3D",
+                                        "livello": "Medio"
+                                    },
+                                    {
+                                        "campo": "Android Studio",
+                                        "livello": "Medio"
+                                    }
+                                ]
                             },
                             {
-                                "campo": "Eclipse",
-                                "livello": "Alto"
-                            },{
-                                "campo": "Visual Studio",
-                                "livello": "Medio"
-                            },{
-                                "campo": "Unity 3D",
-                                "livello": "Medio"
-                            },{
-                                "campo": "Android Studio",
-                                "livello": "Medio"
-                            }
-                        
-                        ]
-                    },{
-                        "campo": "Programmazione",
-                        "valori": [
-                            {
-                                "campo": "Angular-Typescript",
-                                "livello": "Alto"
+                                "campo": "Programmazione",
+                                "valori": [
+                                    {
+                                        "campo": "Angular-Typescript",
+                                        "livello": "Alto"
+                                    },
+                                    {
+                                        "campo": "HTML-CSS",
+                                        "livello": "Alto"
+                                    },
+                                    {
+                                        "campo": "JavaEE",
+                                        "livello": "Medio"
+                                    },
+                                    {
+                                        "campo": "C#",
+                                        "livello": "Medio(Accademico)"
+                                    },
+                                    {
+                                        "campo": "Android",
+                                        "livello": "Medio(Accademico)"
+                                    },
+                                    {
+                                        "campo": "Python",
+                                        "livello": "Base(Accademico)"
+                                    }
+                                ]
                             },
                             {
-                                "campo": "HTML-CSS",
-                                "livello": "Alto"
-                            },{
-                                "campo": "JavaEE",
-                                "livello": "Medio"
-                            },{
-                                "campo": "C#",
-                                "livello": "Medio(Accademico)"
-                            },{
-                                "campo": "Android",
-                                "livello": "Medio(Accademico)"
-                            },{
-                                "campo": "Python",
-                                "livello": "Base(Accademico)"
+                                "campo": "GRAFICA E MULTIMEDIA",
+                                "valori": [
+                                    {
+                                        "campo": "Blender",
+                                        "livello": "Medio-Alto"
+                                    },
+                                    {
+                                        "campo": "Gimp",
+                                        "livello": "Medio"
+                                    },
+                                    {
+                                        "campo": "Audacity",
+                                        "livello": "Medio-Basso"
+                                    },
+                                    {
+                                        "campo": "Substance Painter",
+                                        "livello": "Medio"
+                                    }
+                                ]
                             }
-                        
-                        ]
-                    },{
-                        "campo": "GRAFICA E MULTIMEDIA",
-                        "valori": [
-                            {
-                                "campo": "Blender",
-                                "livello": "Medio-Alto"
-                            },
-                            {
-                                "campo": "Gimp",
-                                "livello": "Medio"
-                            },{
-                                "campo": "Audacity",
-                                "livello": "Medio-Basso"
-                            },{
-                                "campo": "Substance Painter",
-                                "livello": "Medio"
-                            }
-                        
                         ]
                     }
                 ]
             }
-        ]
+        },
+        "en": {
+            "value": {
+                "competenzeLB":"Competenze EN",
+                "lingueLB":"LINGUE EN",
+                "softSkillLB":"Soft Skill EN",
+                "softSkill": [
+                    {
+                        "campo": "Autonomia EN",
+                        "abilita": 80
+                    },
+                    {
+                        "campo": "Fiducia in se stessi EN",
+                        "abilita": 80
+                    },
+                    {
+                        "campo": "Resistenza allo stress EN",
+                        "abilita": 80
+                    },
+                    {
+                        "campo": "Capacità organizzativa EN",
+                        "abilita": 70
+                    },
+                    {
+                        "campo": "Gestione informazioni EN",
+                        "abilita": 80
+                    },
+                    {
+                        "campo": "Precisione ai dettagli EN",
+                        "abilita": 85
+                    },
+                    {
+                        "campo": "Conseguire obiettivi EN",
+                        "abilita": 80
+                    },
+                    {
+                        "campo": "Problem Solving EN",
+                        "abilita": 90
+                    },
+                    {
+                        "campo": "Capacità comunicativa EN",
+                        "abilita": 70
+                    },
+                    {
+                        "campo": "Problem Solving EN",
+                        "abilita": 85
+                    }
+                ],
+                "lingue": [
+                    {
+                        "campo": "Italiano EN",
+                        "livello": "Madrelingua EN"
+                    },
+                    {
+                        "campo": "Inglese EN",
+                        "livello": "B2"
+                    }
+                ],
+                "competenze": [
+                    {
+                        "tipo": "Informatiche EN",
+                        "valori": [
+                            {
+                                "campo": "OFFICE AUTOMATION EN",
+                                "valori": [
+                                    {
+                                        "campo": "Elaborazione testi EN",
+                                        "livello": "Alto EN"
+                                    },
+                                    {
+                                        "campo": "Fogli elettronici EN",
+                                        "livello": "Alto EN"
+                                    },
+                                    {
+                                        "campo": "Web Browser EN",
+                                        "livello": "Alto EN"
+                                    }
+                                ]
+                            },
+                            {
+                                "campo": "Ambienti di sviluppo EN",
+                                "valori": [
+                                    {
+                                        "campo": "Visual Studio Code EN",
+                                        "livello": "Alto EN"
+                                    },
+                                    {
+                                        "campo": "Eclipse EN",
+                                        "livello": "Alto EN"
+                                    },
+                                    {
+                                        "campo": "Visual Studio EN",
+                                        "livello": "Medio EN"
+                                    },
+                                    {
+                                        "campo": "Unity 3D EN",
+                                        "livello": "Medio EN"
+                                    },
+                                    {
+                                        "campo": "Android Studio EN",
+                                        "livello": "Medio EN"
+                                    }
+                                ]
+                            },
+                            {
+                                "campo": "Programmazione EN",
+                                "valori": [
+                                    {
+                                        "campo": "Angular-Typescript EN",
+                                        "livello": "Alto EN"
+                                    },
+                                    {
+                                        "campo": "HTML-CSS",
+                                        "livello": "Alto EN"
+                                    },
+                                    {
+                                        "campo": "JavaEE",
+                                        "livello": "Medio EN"
+                                    },
+                                    {
+                                        "campo": "C#",
+                                        "livello": "Medio(Accademico) EN"
+                                    },
+                                    {
+                                        "campo": "Android",
+                                        "livello": "Medio(Accademico) EN"
+                                    },
+                                    {
+                                        "campo": "Python",
+                                        "livello": "Base(Accademico) EN"
+                                    }
+                                ]
+                            },
+                            {
+                                "campo": "GRAFICA E MULTIMEDIA EN",
+                                "valori": [
+                                    {
+                                        "campo": "Blender",
+                                        "livello": "Medio-Alto EN"
+                                    },
+                                    {
+                                        "campo": "Gimp",
+                                        "livello": "Medio EN"
+                                    },
+                                    {
+                                        "campo": "Audacity",
+                                        "livello": "Medio-Basso EN"
+                                    },
+                                    {
+                                        "campo": "Substance Painter",
+                                        "livello": "Medio EN"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
     }
 }

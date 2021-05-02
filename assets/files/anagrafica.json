@@ -1,33 +1,98 @@
 {
-    "value":[{
-        "campo":"Nome",
-        "valore":"Vito"
-    },{
-        "campo":"Cognome",
-        "valore":"Buonsanto"
-    },{
-        "campo":"Sesso",
-        "valore":"Maschio"
-    },{
-        "campo":"Data nascita",
-        "valore":"03/03/1993"
-    },{
-        "campo":"Luogo di nascita",
-        "valore":"Acquaviva delle fonti (BA)"
-    },{
-        "campo":"Cittadinanza",
-        "valore":"Italiana"
-    },{
-        "campo":"Residenza",
-        "valore":"Via giuseppe mirizzi 34/b, 70132, Bari(BA)"
-    },{
-        "campo":"Domicilio",
-        "valore":"Via giuseppe mirizzi 34/b, 70132, Bari(BA)"
-    },{
-        "campo":"Recapito alternativo",
-        "valore":" - "
-    },{
-        "campo":"Patente di guida",
-        "valore":"Patente di tipo B"
-    }]
+    "lingue": {
+        "it": {
+            "value": {
+                "anagraficaLB": "Anagrafica",
+                "valueArray": [
+                    {
+                        "campo": "Nome",
+                        "valore": "Vito"
+                    },
+                    {
+                        "campo": "Cognome",
+                        "valore": "Buonsanto"
+                    },
+                    {
+                        "campo": "Sesso",
+                        "valore": "Maschio"
+                    },
+                    {
+                        "campo": "Data nascita",
+                        "valore": "03/03/1993"
+                    },
+                    {
+                        "campo": "Luogo di nascita",
+                        "valore": "Acquaviva delle fonti (BA)"
+                    },
+                    {
+                        "campo": "Cittadinanza",
+                        "valore": "Italiana"
+                    },
+                    {
+                        "campo": "Residenza",
+                        "valore": "Via giuseppe mirizzi 34/b, 70132, Bari(BA)"
+                    },
+                    {
+                        "campo": "Domicilio",
+                        "valore": "Via giuseppe mirizzi 34/b, 70132, Bari(BA)"
+                    },
+                    {
+                        "campo": "Recapito alternativo",
+                        "valore": " - "
+                    },
+                    {
+                        "campo": "Patente di guida",
+                        "valore": "Patente di tipo B"
+                    }
+                ]
+            }
+        },
+        "en": {
+            "value": {
+                "anagraficaLB": "Anagrafica EN",
+                "valueArray": [
+                    {
+                        "campo": "Nome EN",
+                        "valore": "Vito"
+                    },
+                    {
+                        "campo": "Cognome EN",
+                        "valore": "Buonsanto"
+                    },
+                    {
+                        "campo": "Sesso EN",
+                        "valore": "Maschio"
+                    },
+                    {
+                        "campo": "Data nascita EN",
+                        "valore": "03/03/1993"
+                    },
+                    {
+                        "campo": "Luogo di nascita EN",
+                        "valore": "Acquaviva delle fonti (BA)"
+                    },
+                    {
+                        "campo": "Cittadinanza EN",
+                        "valore": "Italiana EN"
+                    },
+                    {
+                        "campo": "Residenza EN",
+                        "valore": "Via giuseppe mirizzi 34/b, 70132, Bari(BA)"
+                    },
+                    {
+                        "campo": "Domicilio EN",
+                        "valore": "Via giuseppe mirizzi 34/b, 70132, Bari(BA)"
+                    },
+                    {
+                        "campo": "Recapito alternativo EN",
+                        "valore": " - "
+                    },
+                    {
+                        "campo": "Patente di guida EN",
+                        "valore": "Patente di tipo B EN"
+                    }
+                ]
+            }
+        }
+    }
 }
