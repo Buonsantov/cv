@@ -2,8 +2,11 @@
     <div>
         <a class="nav-link d-lg-none d-xl-block" [routerLink]="['/']" *ngIf="show">
             <div class="it-brand-text">
-               <!--  <img style="width: 65%;" src="./assets/images/cv-locallogo@3x.svg" alt="cv-locall"> -->
-               <div class="nomeText">{{infoGenerali.nomeCandidato | uppercase}}</div>
+                <!--  <img style="width: 65%;" src="./assets/images/cv-locallogo@3x.svg" alt="cv-locall"> -->
+                <div class="nomeText">{{infoGenerali.nomeCandidato | uppercase}}</div>
+
+
+
             </div>
         </a>
     </div>
@@ -20,7 +23,7 @@
                             <use xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#it-burger"></use>
                         </svg>
                     </button>
-                    
+
                     <div class="navbar-collapsable" id="navHamburger" style="display: none;">
                         <div id="overlay" class="overlay" (click)="closeMenu()" style="display: none;">
                         </div>
@@ -61,9 +64,8 @@
                                     </li>
                                     <li *ngIf="checkViewMenu(link.link)"
                                         [ngClass]="selectDiv===link.selfLink ? 'border-left-blue nav-item':'nav-item'">
-                                        <a [ngClass]="mobile ? 'no-decoretor nav-link':'nav-link clickable'" (click)="closeMenu()"
-                                        
-                                        (click)="goToDiv(link.link)">
+                                        <a [ngClass]="mobile ? 'no-decoretor nav-link':'nav-link clickable'"
+                                            (click)="closeMenu()" (click)="goToDiv(link.link)">
                                             <div id="headerCosa" [ngClass]="mobile ? 'single-head-sm':'single-head'">
                                                 <span
                                                     [ngClass]="divSelect(link.link) && !mobile ? 'txtUnderline':'noTxtUnderline'">
@@ -72,13 +74,42 @@
                                         </a>
                                     </li>
                                 </div>
+                                <li>
+                                    <div class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"
+                                            style="margin: 0;">
+                                            <span class="textLingua">{{getCurrentLingua()}}</span>
+                                            <svg class="icon  d-lg-block">
+                                                <use xlink:href="assets/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
+                                            </svg>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-header">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="link-list-wrapper">
+                                                        <ul class="link-list">
+                                                            <li>
+                                                                <a class="list-item" (click)="setLingua('it')"><span>ITALIANO</span></a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="list-item" (click)="setLingua('en')"><span>ENGLISH</span></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                             
                             </ul>
                         </div>
                     </div>
                 </nav>
 
-                <div>
+                <div style="display: inline-flex;">
                     <div class="nomeText" *ngIf="mobile">{{infoGenerali.nomeCandidato | uppercase}}</div>
+
                 </div>
             </div>
         </div>

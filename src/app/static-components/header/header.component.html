@@ -32,31 +32,60 @@
                       <svg class="icon" style="fill: white; color:white">
                         <use xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#it-info-circle"></use>
                       </svg>
-                      Contatti
+                      {{infoGenerali.contatti}}
                     </div>
                   </div>
                   <div>
                     <ul style="list-style-type: none;">
 
                       <li class="contattiText">
-                        <img class="listImage" style="width:17px" src="./assets/images/call_svg.svg" alt="cv-local"> {{infoGenerali.telefono}} 
+                        <img class="listImage" style="width:17px" src="./assets/images/call_svg.svg" alt="cv-local">
+                        {{infoGenerali.telefono}}
                       </li>
                       <li class="contattiText">
                         <img class="listImage" src="./assets/images/mail_svg.svg" alt="cv-local">
                         {{infoGenerali.email}}
                       </li>
                       <li class="contattiText"><a (click)="goToLink('linkedin')" class="cliccable">
-                          <img class="listImage" src="./assets/images/linkedin_svg.svg" alt="cv-local"
-                            >  {{infoGenerali.nomeLinkedin}} 
+                          <img class="listImage" src="./assets/images/linkedin_svg.svg" alt="cv-local">
+                          {{infoGenerali.nomeLinkedin}}
                         </a>
                       </li>
                       <li class="contattiText"><a (click)="download()" class="cliccable">
-                        <img class="listImage" src="./assets/images/download.svg" alt="cv-local"
-                          > Curriculum
-                      </a>
-                    </li>
+                          <img class="listImage" src="./assets/images/download.svg" alt="cv-local"> Curriculum
+                        </a>
+                      </li>
 
                     </ul>
+                  </div>
+                </div>
+
+                <div class="navbar-item-container d-flex" style="margin-left: 3rem;">
+                  <div class="it-header-slim-wrapper-content">
+                    <div class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="display: inline-flex;">
+                        <span style="color: white;">{{getCurrentLingua()}}</span>
+                        <svg class="icon  d-lg-block">
+                          <use xlink:href="assets/bootstrap-italia/dist/svg/sprite.svg#it-expand"></use>
+                        </svg>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-header">
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="link-list-wrapper">
+                              <ul class="link-list">
+                                <li>
+                                  <a class="list-item" (click)="setLingua('it')"><span>IT</span></a>
+                                </li>
+                                <li>
+                                  <a class="list-item" (click)="setLingua('en')"><span>EN</span></a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -73,7 +102,7 @@
     </div>
 
 
-    <app-header-hamburger title="{{infoGenerali.nomeCandidato}}" logo="./assets/images/foto_profilo-jpg" mobileWidth=991 [linkArray]="linkArray"
-      type="div" primaryColor="#3a3a3a" secondaryColor="#f0f8ff"></app-header-hamburger>
+    <app-header-hamburger title="{{infoGenerali.nomeCandidato}}" logo="./assets/images/foto_profilo-jpg" mobileWidth=991
+      [linkArray]="linkArray" type="div" primaryColor="#3a3a3a" secondaryColor="#f0f8ff"></app-header-hamburger>
   </div>
 </div>

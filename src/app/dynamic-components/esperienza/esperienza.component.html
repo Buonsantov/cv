@@ -10,7 +10,7 @@
                         <div class="collapse-header  " id="headingEsperienze">
                             <button data-toggle="collapse" data-target="#collapseEsperienze" aria-expanded="true"
                                 aria-controls="collapseEsperienze" style="border: none; background-color: white;">
-                                <h3 class="title-page">Esperienze</h3>
+                                <h3 class="title-page">{{lavoroModello.esperienzeLB}}</h3>
                             </button>
 
 
@@ -19,7 +19,7 @@
                                 <div class="collapse-body">
                                     <div class="row">
                                         <hr class="aria-separator">
-                                        <div class="row w-100 p-2" *ngFor="let campo of lavoroModello; index as i">
+                                        <div class="row w-100 p-2" *ngFor="let campo of lavoroModello.valueArray; index as i">
 
                                             <div class="col-12 col-md-2 alignColon spacing-top-1 d-grid">
                                                 <div class="textTipo ">
@@ -70,7 +70,7 @@
                                                             data-toggle="modal" data-target="#exampleModal2"
                                                             style="padding-right: 0!important;"
                                                             (click)="selezionaInfo(campo.maggioriInfo)">
-                                                            <span class="leggi-piu">INFORMAZIONI</span>
+                                                            <span class="leggi-piu">{{lavoroModello.info}}</span>
                                                             <svg class="icon icon-sm" style="fill:#06c">
                                                                 <use
                                                                     xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right">
@@ -111,7 +111,7 @@
             <div class="modal-header">
                 <div class="col-12">
                     <div class="label-modale">
-                        <span class="modal-title">Informazioni aggiuntive</span>
+                        <span class="modal-title">{{lavoroModello.infoAggiuntive}}</span>
 
                     </div>
                 </div>
@@ -122,7 +122,7 @@
             </div>
             <div class="modal-footer col-12" style="margin-top: 1rem;">
                 <button class="btn btn-primary btn-sm" style="width: 150px; color: white;" data-dismiss="modal"
-                    type="button">Chiudi</button>
+                    type="button">{{lavoroModello.chiudi}}</button>
             </div>
         </div>
     </div>

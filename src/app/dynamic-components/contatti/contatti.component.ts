@@ -1,5 +1,6 @@
 import { Component, DoCheck, OnInit } from '@angular/core';
 import { DownloadService } from 'src/app/services/download.service';
+import { LinguaService } from 'src/app/services/lingua.service';
 import infoGenerali from 'src/assets/files/infoGenerali.json';
 
 @Component({
@@ -11,10 +12,13 @@ export class ContattiComponent implements OnInit, DoCheck {
   infoGenerali: any;
   mobile: boolean;
 
-  constructor(public downloadService: DownloadService) {
+  constructor(
+    public downloadService: DownloadService,
+    public linguaService: LinguaService) {
     this.popolaInfo();
   }
   ngDoCheck(): void {
+    this.infoGenerali = infoGenerali.lingue[this.linguaService.getLingua()].value;
     this.checkWin();
   }
 
@@ -33,7 +37,7 @@ export class ContattiComponent implements OnInit, DoCheck {
   }
 
   popolaInfo() {
-    const json = infoGenerali.value;
+    const json = infoGenerali.lingue[this.linguaService.getLingua()].value;
     this.infoGenerali = json;
     console.log(this.infoGenerali);
   }

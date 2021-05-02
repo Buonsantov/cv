@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import infoGenerali from 'src/assets/files/infoGenerali.json';
+import { LinguaService } from './lingua.service';
 
 @Injectable({
   providedIn: 'root'
@@ -7,8 +8,10 @@ import infoGenerali from 'src/assets/files/infoGenerali.json';
 export class DownloadService {
   candidato;
   infoGenerali: any;
-  constructor() {
-    const json = infoGenerali.value;
+  constructor(
+    public linguaService: LinguaService
+  ) {
+    const json = infoGenerali.lingue[this.linguaService.getLingua()].value;
     this.infoGenerali = json;
     this.candidato = this.infoGenerali.nomeCandidato;
    }

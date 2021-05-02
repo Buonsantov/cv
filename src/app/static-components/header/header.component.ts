@@ -2,6 +2,7 @@ import { AfterViewInit, Component, DoCheck, OnInit } from '@angular/core';
 import { DownloadService } from 'src/app/services/download.service';
 import { HeaderObjLink } from '../header-hamburger/headerObj';
 import infoGenerali from 'src/assets/files/infoGenerali.json';
+import { LinguaService } from 'src/app/services/lingua.service';
 
 @Component({
   selector: 'app-header',
@@ -21,6 +22,7 @@ export class HeaderComponent implements OnInit, DoCheck, AfterViewInit {
 
   constructor(
     public downloadService: DownloadService,
+    public linguaService: LinguaService
 
   ) {
     this.popolaInfo();
@@ -29,7 +31,7 @@ export class HeaderComponent implements OnInit, DoCheck, AfterViewInit {
   }
 
   popolaInfo() {
-    const json = infoGenerali.value;
+    const json = infoGenerali.lingue[this.linguaService.getLingua()].value;
     this.infoGenerali = json;
     console.log(this.infoGenerali);
   }
@@ -42,7 +44,7 @@ export class HeaderComponent implements OnInit, DoCheck, AfterViewInit {
   }
   ngDoCheck(): void {
     this.checkWin();
-
+    this.infoGenerali = infoGenerali.lingue[this.linguaService.getLingua()].value;
   }
   checkWin() {
 
@@ -58,15 +60,15 @@ export class HeaderComponent implements OnInit, DoCheck, AfterViewInit {
   popolaArray() {
     this.linkArray = [];
     let link;
-    link = new HeaderObjLink('Contatti', 'contatti', 'contatti');
+    link = new HeaderObjLink(this.infoGenerali.contattiH, 'contatti', 'contatti');
     this.linkArray.push(link);
-    link = new HeaderObjLink('Anagrafica', 'anagrafica', 'anagrafica');
+    link = new HeaderObjLink(this.infoGenerali.anagraficaH, 'anagrafica', 'anagrafica');
     this.linkArray.push(link);
-    link = new HeaderObjLink('Istruzione', 'educazione', 'educazione');
+    link = new HeaderObjLink(this.infoGenerali.istruzioneH, 'educazione', 'educazione');
     this.linkArray.push(link);
-    link = new HeaderObjLink('Esperienze', 'esperienza', 'esperienza');
+    link = new HeaderObjLink(this.infoGenerali.esperienzeH, 'esperienza', 'esperienza');
     this.linkArray.push(link);
-    link = new HeaderObjLink('Competenze', 'competenze', 'competenze');
+    link = new HeaderObjLink(this.infoGenerali.competenzeH, 'competenze', 'competenze');
     this.linkArray.push(link);
 
   }
@@ -91,6 +93,15 @@ export class HeaderComponent implements OnInit, DoCheck, AfterViewInit {
 
   download() {
     this.downloadService.downloadCurriculum(this.infoGenerali.curriculum);
+  }
+
+  getCurrentLingua(): string {
+    return this.linguaService.getLinguaUpperCase();
+  }
+
+  setLingua(lingua) {
+    this.linguaService.setLingua(lingua);
+    sessionStorage.setItem('lingua', this.linguaService.getLingua());
   }
 
 }

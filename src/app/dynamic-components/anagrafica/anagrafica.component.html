@@ -10,7 +10,7 @@
                         <div class="collapse-header  " id="headingAnagrafica">
                             <button data-toggle="collapse" data-target="#collapseAnagrafica" aria-expanded="true"
                                 aria-controls="collapseAnagrafica" style="border: none; background-color: white;">
-                                <h3 class="title-page">Anagrafica</h3>
+                                <h3 class="title-page">{{anagraficaModello.anagraficaLB}}</h3>
                             </button>
 
 
@@ -19,8 +19,9 @@
                                 <div class="collapse-body">
                                     <div class="row">
                                         <hr class="aria-separator">
-                                        <div class="col-12 col-md-4 alignColon spacing-top-1 d-grid"  *ngFor="let campo of anagraficaModello">
-                                            <div class="textStep ">                                             
+                                        <div class="col-12 col-md-4 alignColon spacing-top-1 d-grid"
+                                            *ngFor="let campo of anagraficaModello.valueArray">
+                                            <div class="textStep ">
                                                 <b>{{campo.campo}}: </b>
                                                 {{campo.valore}}
                                             </div>

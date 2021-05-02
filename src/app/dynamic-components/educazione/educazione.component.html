@@ -10,7 +10,7 @@
                         <div class="collapse-header  " id="headingIstruzione">
                             <button data-toggle="collapse" data-target="#collapseIstruzione" aria-expanded="true"
                                 aria-controls="collapseIstruzione" style="border: none; background-color: white;">
-                                <h3 class="title-page">Istruzione</h3>
+                                <h3 class="title-page">{{istruzioneModello.educazioneLB}}</h3>
                             </button>
 
 
@@ -19,7 +19,7 @@
                                 <div class="collapse-body">
                                     <div class="row">
                                         <hr class="aria-separator">
-                                        <div class="row w-100 p-2" *ngFor="let campo of istruzioneModello; index as i">
+                                        <div class="row w-100 p-2" *ngFor="let campo of istruzioneModello.valueArray; index as i">
 
                                             <div class="col-12 col-md-2 alignColon spacing-top-1 d-grid">
                                                 <div class="textTipo ">
@@ -68,7 +68,7 @@
                                                         <button type="button" class="btn clickable btnInfo"
                                                             data-toggle="modal" data-target="#exampleModal" style="padding-right: 0!important;"
                                                             (click)="selezionaInfo(campo.maggioriInfo)">
-                                                            <span class="leggi-piu">INFORMAZIONI</span>
+                                                            <span class="leggi-piu">{{istruzioneModello.info}}</span>
                                                             <svg class="icon icon-sm" style="fill:#06c">
                                                                 <use
                                                                     xlink:href="./assets/bootstrap-italia/dist/svg/sprite.svg#it-arrow-right">
@@ -109,7 +109,7 @@
             <div class="modal-header">
                 <div class="col-12">
                     <div class="label-modale">
-                        <span class="modal-title">Informazioni aggiuntive</span>
+                        <span class="modal-title">{{istruzioneModello.infoAggiuntive}}</span>
 
                     </div>
                 </div>
@@ -120,7 +120,7 @@
             </div>
             <div class="modal-footer col-12" style="margin-top: 1rem;">
                 <button class="btn btn-primary btn-sm" style="width: 150px; color: white;" data-dismiss="modal"
-                    type="button">Chiudi</button>
+                    type="button">{{istruzioneModello.chiudi}}</button>
             </div>
         </div>
     </div>

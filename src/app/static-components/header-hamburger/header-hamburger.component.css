@@ -197,3 +197,10 @@ li {
     letter-spacing: 0;
     line-height: 48px;
 }
+.textLingua{
+    color: var(--primaryColor);
+    font-family: "Titillium Web";
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 27px;
+}

@@ -1,11 +1,46 @@
 {
-    "value":{
-        "nomeCandidato":"Buonsanto Vito",
-        "fotoProfilo":"./assets/images/foto_profilo.jpg",
-        "email":"buonsantovito@gmail.com",
-        "linkedin":"https://www.linkedin.com/in/vito-buonsanto-83043b5b/",
-        "nomeLinkedin":"buonsantovito",
-        "telefono":"3801969470",
-        "curriculum":"assets/files/CV.pdf"
+    "lingue": {
+        "it": {
+            "value": {
+                "nomeCandidato": "Buonsanto Vito",
+                "fotoProfilo": "./assets/images/foto_profilo.jpg",
+                "email": "buonsantovito@gmail.com",
+                "linkedin": "https://www.linkedin.com/in/vito-buonsanto-83043b5b/",
+                "nomeLinkedin": "buonsantovito",
+                "telefono": "3801969470",
+                "curriculum": "assets/files/CV.pdf",
+                "contatti": "Contatti",
+                "svil": "Applicazione sviluppata in",
+                "da": "Da",
+                "contattoSvil": "Contatti sviluppatore",
+                "emailLB": "Email",
+                "contattiH": "Contatti",
+                "anagraficaH": "Anagrafica",
+                "istruzioneH": "Istruzione",
+                "esperienzeH": "Esperienze",
+                "competenzeH": "Competenze"
+            }
+        },
+        "en": {
+            "value": {
+                "nomeCandidato": "Buonsanto Vito",
+                "fotoProfilo": "./assets/images/foto_profilo.jpg",
+                "email": "buonsantovito@gmail.com",
+                "linkedin": "https://www.linkedin.com/in/vito-buonsanto-83043b5b/",
+                "nomeLinkedin": "buonsantovito",
+                "telefono": "3801969470",
+                "curriculum": "assets/files/CV.pdf",
+                "contatti": "Contatti EN",
+                "svil": "Applicazione sviluppata in EN",
+                "da": "From",
+                "contattoSvil": "Contatti sviluppatore EN",
+                "emailLB": "Email",
+                "contattiH": "Contatti EN",
+                "anagraficaH": "Anagrafica EN",
+                "istruzioneH": "Istruzione EN",
+                "esperienzeH": "Esperienze EN",
+                "competenzeH": "Competenze EN"
+            }
+        }
     }
 }

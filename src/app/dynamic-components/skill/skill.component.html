@@ -10,7 +10,7 @@
                         <div class="collapse-header  " id="headingCompetenze">
                             <button data-toggle="collapse" data-target="#collapseCompetenze" aria-expanded="true"
                                 aria-controls="collapseCompetenze" style="border: none; background-color: white;">
-                                <h3 class="title-page">Competenze</h3>
+                                <h3 class="title-page">{{skillModello.competenzeLB}}</h3>
                             </button>
 
 
@@ -24,7 +24,7 @@
 
                                             <div
                                                 class="textTipo col-12 col-md-4 alignColon textStep spacing-top-1 d-grid">
-                                                LINGUE:
+                                                {{skillModello.lingueLB}}:
                                             </div>
                                             <div class="col-12 col-md-4 alignColon textStep spacing-top-1 d-grid">
                                                 <ul>
@@ -42,7 +42,7 @@
 
                                             <div
                                                 class="textTipo col-12 col-md-4 alignColon textStep spacing-top-1 d-grid">
-                                                COMPETENZE {{competenze.tipo | uppercase}}:
+                                                {{skillModello.competenzeLB | uppercase}} {{competenze.tipo | uppercase}}:
                                             </div>
                                             <div class="col-12 col-md-4 alignColon textStep spacing-top-1 d-grid">
 
@@ -64,7 +64,7 @@
 
                                             <div
                                                 class="textTipo col-12 col-md-4 alignColon textStep spacing-top-1 d-grid">
-                                                SOFT SKILL:
+                                               {{skillModello.softSkillLB | uppercase}}:
                                             </div>
                                             <div class="col-12 col-md-8 alignColon textStep spacing-top-1 d-grid">
 

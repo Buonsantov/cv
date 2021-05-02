@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, DoCheck, ElementRef, HostListener, Input, OnInit } from '@angular/core';
 import { HeaderObjLink } from './headerObj';
 import infoGenerali from 'src/assets/files/infoGenerali.json';
+import { LinguaService } from 'src/app/services/lingua.service';
 @Component({
   selector: 'app-header-hamburger',
   templateUrl: './header-hamburger.component.html',
@@ -37,7 +38,8 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
   altezze = [];
 
   constructor(
-    private el: ElementRef
+    private el: ElementRef,
+    public linguaService: LinguaService
   ) {
     this.popolaInfo();
     this.checkWin();
@@ -57,7 +59,7 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
   }
 
   popolaInfo() {
-    const json = infoGenerali.value;
+    const json = infoGenerali.lingue[this.linguaService.getLingua()].value;
     this.infoGenerali = json;
     console.log(this.infoGenerali);
   }
@@ -81,6 +83,8 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
   ngDoCheck(): void {
     this.checkLocation();
     this.checkWin();
+    this.infoGenerali = infoGenerali.lingue[this.linguaService.getLingua()].value;
+
     // this.detectRoteateScreen();
   }
 
@@ -246,6 +250,16 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
     }
     return true;
 
+  }
+
+  getCurrentLingua(): string {
+    return this.linguaService.getLinguaComplete();
+  }
+
+  setLingua(lingua) {
+    this.linguaService.setLingua(lingua);
+    sessionStorage.setItem('lingua', this.linguaService.getLingua());
+    this.closeMenu();
   }
 
 
