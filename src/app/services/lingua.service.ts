@@ -12,7 +12,7 @@ export class LinguaService {
         if (sessionStorage.getItem('lingua')) {
             this.lingua = sessionStorage.getItem('lingua');
         } else {
-            this.lingua = 'en';
+            this.lingua = 'it';
         }
     }
 
@@ -25,8 +25,8 @@ export class LinguaService {
 
     getLinguaUpperCase() {
         switch (this.lingua) {
-            case 'it': return 'IT'; break;
-            case 'en': return 'EN'; break;
+            case 'it': return 'ITA'; break;
+            case 'en': return 'ENG'; break;
         }
     }
     getLinguaService() {

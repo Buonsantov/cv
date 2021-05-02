@@ -102,6 +102,7 @@ export class HeaderComponent implements OnInit, DoCheck, AfterViewInit {
   setLingua(lingua) {
     this.linguaService.setLingua(lingua);
     sessionStorage.setItem('lingua', this.linguaService.getLingua());
+    window.location.reload();
   }
 
 }

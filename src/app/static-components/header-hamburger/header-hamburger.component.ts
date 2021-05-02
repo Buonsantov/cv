@@ -260,6 +260,7 @@ export class HeaderHamburgerComponent implements OnInit, DoCheck, AfterViewInit 
     this.linguaService.setLingua(lingua);
     sessionStorage.setItem('lingua', this.linguaService.getLingua());
     this.closeMenu();
+    window.location.reload();
   }
 
 
