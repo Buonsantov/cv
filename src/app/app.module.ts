@@ -23,6 +23,8 @@ import { ContattiComponent } from './dynamic-components/contatti/contatti.compon
 import { SkillComponent } from './dynamic-components/skill/skill.component';
 import { EducazioneComponent } from './dynamic-components/educazione/educazione.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 /**
  *  Da importare per avere la configurazione al boot
@@ -66,7 +68,9 @@ export function appInit(appConfigService: ConfigService) {
             animationDuration: 300,
             imageHeight: 30,
             imageWidth: 30
-        })
+        }),
+
+        ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
     ],
     providers: [
         ConfigService,

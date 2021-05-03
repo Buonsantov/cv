@@ -1,4 +1,14 @@
+
+Deploy su gitPage
+
 git remote remove origin
 git remote add origin https://github.com/<username>/<repo>.git
 ng add angular-cli-ghpages
- [deploy]    ng deploy --base-href=/cv/
+[deploy]    ng deploy --base-href=/cv/
+
+
+ PWA DEPLOY:
+
+[predeploy]:  ng build --prod --base-href=/cv/
+[deploy]:     npx gh-pages -d dist/cv-h
+[deploy]:     ng deploy --base-href=/cv/
